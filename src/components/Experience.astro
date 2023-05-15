@@ -4,8 +4,9 @@ const { lists } = Astro.props;
 {lists.map((item) => (
 <div class="w3-container">
   <h5 class="w3-opacity"><b>{item.experience}</b></h5>
-  <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>{item.period}{item.current &&<> - <span class="w3-tag w3-teal w3-round">Current</span></>}</h6>
+  <h6 class="w3-text-indigo"><i class="fa fa-calendar fa-fw w3-margin-right"></i>{item.period}{item.current &&<> - <span class="w3-tag w3-indigo w3-round">Current</span></>}</h6>
   <p>{item.description}</p>
+  <p class="w3-text-indigo w3-bold">{item.skills?.join(' · ')}</p>
   <hr>
 </div>
 ))}
